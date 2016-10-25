@@ -10,3 +10,15 @@ Available options:
 * `FXA_DESKTOP_CONTEXT` - `context=` value. (NOTE: `fx_desktop_v2` is default).
 * `FIREFOX_BIN=/Applications/FirefoxNightly.app/Contents/MacOS/firefox-bin npm start`
 * `FIREFOX_DEBUGGER=true` - open [Browser Toolbox](https://developer.mozilla.org/en-US/docs/Tools/Browser_Toolbox) on start (NOTE: `false` by default for speed).
+
+### Basic Usage Example in OS X
+
+* Download node.js 4: https://nodejs.org/dist/v4.6.0/node-v4.6.0.pkg
+* install it by following the steps in the `.pkg` installer.
+* Open Terminal and Run commands:
+* `git clone https://github.com/vladikoff/fxa-dev-launcher.git`
+* `cd fxa-dev-launcher`
+* `npm install`
+* `FXA_ENV=latest npm start`
+
+The above will start a firefox talking to `latest.dev.lcip.org`
