@@ -52,6 +52,20 @@ var FXA_DESKTOP_CONTEXT = process.env.FXA_DESKTOP_CONTEXT || 'fx_desktop_v3';
 var e10s = process.env.FXA_E10S === 'true';
 var fxaEnv = CONFIGS[env];
 
+
+if (! fxaEnv) {
+  // If env is not found in the above list, assume it's an fxa-dev box.
+  var host = 'https://' + env + '.dev.lcip.org/';
+
+  fxaEnv = {
+    auth: host + 'auth/v1',
+    content: host,
+    token: host + 'syncserver/token/1.0/sync/1.5',
+    oauth: 'https://oauth-' + env + '.dev.lcip.org/v1',
+    profile: host + 'profile/v1'
+  };
+}
+
 var fxaProfile = {
   // enable debugger and toolbox
   'devtools.chrome.enabled': true,
