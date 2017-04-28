@@ -71,6 +71,8 @@ var fxaProfile = {
   'devtools.chrome.enabled': true,
   'devtools.debugger.remote-enabled': true,
   'devtools.debugger.prompt-connection': false,
+  // disable about:config warning
+  'general.warnOnAboutConfig': false,
   // disable signed extensions
   // the WebDriver extension will not work in Nightly because signed extensions are forced
   'xpinstall.signatures.required': false,
