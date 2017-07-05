@@ -49,7 +49,7 @@ var CONFIGS = {
 
 var env = process.env.FXA_ENV || 'local';
 var FXA_DESKTOP_CONTEXT = process.env.FXA_DESKTOP_CONTEXT || 'fx_desktop_v3';
-var e10s = process.env.FXA_E10S === 'true';
+var e10sDisabled = process.env.DISABLE_E10S === 'true';
 var fxaEnv = CONFIGS[env];
 
 
@@ -116,7 +116,7 @@ if (fxaEnv.loop) {
   fxaProfile['loop.server'] = fxaEnv.loop;
 }
 
-if (! e10s) {
+if (e10sDisabled) {
   // disable e10s
   fxaProfile['browser.tabs.remote.autostart'] = false;
   fxaProfile['browser.tabs.remote.autostart.1'] = false;
@@ -124,7 +124,7 @@ if (! e10s) {
 }
 
 console.log(chalk.yellow('Configuration:', JSON.stringify(fxaEnv, null, 2)));
-console.log(chalk.yellow('E10S Status:', e10s));
+console.log(chalk.yellow('E10S Status:', ! e10sDisabled));
 console.log(chalk.yellow('FXA_ENV:', env));
 console.log(chalk.yellow('FIREFOX_BIN Binary:', process.env.FIREFOX_BIN || 'Default System Firefox binary'));
 console.log(chalk.yellow('FXA_DESKTOP_CONTEXT:', FXA_DESKTOP_CONTEXT));
