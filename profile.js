@@ -17,12 +17,12 @@ var CONFIGS = {
     oauth: 'https://oauth-latest.dev.lcip.org/v1',
     profile: 'https://latest.dev.lcip.org/profile/v1'
   },
-  'content': {
-    auth: 'https://content.dev.lcip.org/auth/v1',
+  'start-remote': {
+    auth: 'https://fxaci.dev.lcip.org/auth/v1',
     content: 'http://127.0.0.1:3030/',
-    token: 'https://content.dev.lcip.org/syncserver/token/1.0/sync/1.5',
-    oauth: 'https://oauth-content.dev.lcip.org/v1',
-    profile: 'https://content.dev.lcip.org/profile/v1'
+    token: 'https://fxaci.dev.lcip.org/syncserver/token/1.0/sync/1.5',
+    oauth: 'https://oauth-fxaci.dev.lcip.org/v1',
+    profile: 'https://fxaci.dev.lcip.org/profile/v1'
   },
   'stable': {
     auth: 'https://stable.dev.lcip.org/auth/v1',
