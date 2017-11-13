@@ -13,7 +13,7 @@ Available options:
 
 ### Basic Usage Example in OS X
 
-* Download node.js 4: https://nodejs.org/dist/v4.6.0/node-v4.6.0.pkg
+* Download node.js
 * install it by following the steps in the `.pkg` installer.
 * Open Terminal and Run commands:
 * `git clone https://github.com/vladikoff/fxa-dev-launcher.git`
