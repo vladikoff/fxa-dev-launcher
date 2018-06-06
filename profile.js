@@ -91,6 +91,7 @@ var fxaProfile = {
   'services.sync.log.appender.dump': 'Debug',
   'identity.fxaccounts.auth.uri': fxaEnv.auth,
   'identity.fxaccounts.allowHttp': true,
+  'identity.fxaccounts.remote.root': fxaEnv.content,
   'identity.fxaccounts.remote.force_auth.uri': fxaEnv.content + 'force_auth?service=sync&context=' + FXA_DESKTOP_CONTEXT,
   'identity.fxaccounts.remote.signin.uri': fxaEnv.content + 'signin?service=sync&context=' + FXA_DESKTOP_CONTEXT,
   'identity.fxaccounts.remote.signup.uri': fxaEnv.content + 'signup?service=sync&context=' + FXA_DESKTOP_CONTEXT,
