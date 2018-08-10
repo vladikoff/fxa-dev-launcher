@@ -17,6 +17,7 @@ if (! fxaEnv) {
   fxaEnv = 'https://' + env + '.dev.lcip.org';
 }
 
+var FXA_DESKTOP_CONTEXT = process.env.FXA_DESKTOP_CONTEXT || 'fx_desktop_v3';
 var fxaProfile = {
   // enable debugger and toolbox
   'devtools.chrome.enabled': true,
@@ -33,6 +34,7 @@ var fxaProfile = {
   'browser.uitour.requireSecure': false,
   'services.sync.log.appender.dump': 'Debug',
   'identity.fxaccounts.allowHttp': true,
+  'identity.fxaccounts.contextParam': FXA_DESKTOP_CONTEXT,
   'identity.fxaccounts.autoconfig.uri': fxaEnv,
   // disable auto update
   'app.update.auto': false,
@@ -43,5 +45,6 @@ console.log(chalk.yellow('Configuration:', fxaEnv));
 console.log(chalk.yellow('FXA_ENV:', env));
 console.log(chalk.yellow('FIREFOX_BIN Binary:', process.env.FIREFOX_BIN || 'Default System Firefox binary'));
 console.log(chalk.yellow('FIREFOX_DEBUGGER:', !! process.env.FIREFOX_DEBUGGER));
+console.log(chalk.yellow('FXA_DESKTOP_CONTEXT:', FXA_DESKTOP_CONTEXT));
 
 module.exports = fxaProfile;
