@@ -29,6 +29,8 @@ var fxaProfile = {
   'identity.fxaccounts.loglevel': 'Debug',
   'services.sync.log.appender.file.logOnSuccess': true,
   'services.sync.log.appender.console': 'Debug',
+  'browser.uitour.testingOrigins': 'http://127.0.0.1:8001,http://127.0.0.1:8000,https://www.mozilla.org,https://www.allizom.org,https://www-demo5.allizom.org,https://www-dev.allizom.org',
+  'browser.uitour.requireSecure': false,
   'services.sync.log.appender.dump': 'Debug',
   'identity.fxaccounts.allowHttp': true,
   'identity.fxaccounts.autoconfig.uri': fxaEnv,
