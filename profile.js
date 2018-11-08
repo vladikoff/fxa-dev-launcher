@@ -36,6 +36,7 @@ var fxaProfile = {
   'identity.fxaccounts.allowHttp': true,
   'identity.fxaccounts.contextParam': FXA_DESKTOP_CONTEXT,
   'identity.fxaccounts.autoconfig.uri': fxaEnv,
+  'browser.newtabpage.activity-stream.fxaccounts.endpoint': fxaEnv,
   // disable auto update
   'app.update.auto': false,
   'app.update.enabled': false
