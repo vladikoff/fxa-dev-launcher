@@ -104,8 +104,7 @@ var fxaProfile = {
   'identity.sync.tokenserver.uri': fxaEnv.token,
   'services.sync.tokenServerURI': fxaEnv.token,
   'identity.fxaccounts.contextParam': FXA_DESKTOP_CONTEXT,
-  'identity.fxaccounts.autoconfig.uri': fxaEnv,
-  'browser.newtabpage.activity-stream.fxaccounts.endpoint': fxaEnv,
+  'browser.newtabpage.activity-stream.fxaccounts.endpoint': fxaEnv.content,
   // disable auto update
   'app.update.auto': false,
   'app.update.enabled': false,
